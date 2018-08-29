@@ -1,0 +1,24 @@
+{
+  "name": "fully_functional_kubernetes_cluster-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghulammustafaraza/fully_functional_kubernetes_cluster-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghulammustafaraza/fully_functional_kubernetes_cluster-/issues"
+  },
+  "homepage": "https://github.com/ghulammustafaraza/fully_functional_kubernetes_cluster-#readme",
+  "dependencies": {
+    "fs-extra": "^7.0.0",
+    "json2yaml": "^1.1.0"
+  }
+}

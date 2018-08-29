@@ -1,0 +1,4 @@
+*/*.yml
+*/*.json
+*/out
+node_modules
