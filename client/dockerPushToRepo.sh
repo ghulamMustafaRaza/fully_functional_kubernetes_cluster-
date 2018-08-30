@@ -1,2 +1,2 @@
-IMAGE=ghulammustafaraza/test
+IMAGE=uqutub/test
 docker push $IMAGE

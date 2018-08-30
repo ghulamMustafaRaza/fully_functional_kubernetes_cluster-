@@ -1,0 +1,40 @@
+---
+  apiVersion: "extensions/v1beta1"
+  kind: "Deployment"
+  metadata: 
+    labels: 
+      app: "express"
+    name: "express-web"
+  spec: 
+    replicas: 4
+    template: 
+      metadata: 
+        labels: 
+          app: "express"
+          tier: "backend"
+      spec: 
+        containers: 
+          - 
+            imagePullPolicy: "Always"
+            env: 
+              - 
+                name: "PORT"
+                value: "3000"
+            image: "uqutub/test"
+            name: "express-web"
+            ports: 
+              - 
+                containerPort: 3000
+                protocol: "TCP"
+---
+  apiVersion: "v1"
+  kind: "Service"
+  metadata: 
+    name: "express-service"
+  spec: 
+    type: "LoadBalancer"
+    ports: 
+      - 
+        port: 3000
+    selector: 
+      app: "express"
