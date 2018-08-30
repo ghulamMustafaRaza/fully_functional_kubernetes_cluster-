@@ -1,4 +1,4 @@
-*/*.yml
-*/*.json
 */out
+*/out.yml
 node_modules
+client/node_modules

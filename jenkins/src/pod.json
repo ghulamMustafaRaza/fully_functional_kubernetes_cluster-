@@ -1,0 +1,38 @@
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "name": "jenkins",
+        "labels": {
+            "app": "jenkins"
+        }
+    },
+    "spec": {
+        "containers": [
+            {
+                "name": "jenkins",
+                "image": "jenkins",
+                "imagePullPolicy": "Always",
+                "ports": [
+                    {
+                        "containerPort": 8080
+                    }
+                ],
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/jenkins_home",
+                        "name": "jenkins-data"
+                    }
+                ]
+            }
+        ],
+        "volumes": [
+            {
+                "name": "jenkins-data",
+                "hostPath": {
+                    "path": "${pwd}/jenkins_home"
+                }
+            }
+        ]
+    }
+}

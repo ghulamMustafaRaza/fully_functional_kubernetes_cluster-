@@ -7,7 +7,7 @@ module.exports = (replace = {
     let ymlText = ''
     let outPath = path.join(__dirname, 'out');
     if (!fs.existsSync(outPath)) fs.mkdirSync(outPath)
-    fs.readdirSync(path.join(__dirname, 'templates'))
+    fs.readdirSync(path.join(__dirname, 'src'))
     .filter(item => {
         return (item.slice(-4) === 'json')
     })

@@ -1,0 +1,18 @@
+{
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "jenkins"
+    },
+    "spec": {
+        "selector": {
+            "app": "jenkins"
+        },
+        "ports": [
+            {
+                "port": 8080,
+                "targetPort": 8080
+            }
+        ]
+    }
+}
